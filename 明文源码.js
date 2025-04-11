@@ -47,9 +47,9 @@ let 动态UUID;
 let link = [];
 let banHosts = [atob('c3BlZWQuY2xvdWRmbGFyZS5jb20=')];
 export default {
-	async fetch(request, env, ctx) {
+	async fetch(请求, env, ctx) {
 		try {
-			const UA = request.headers.get('User-Agent') || 'null';
+			const UA = 请求.headers.get('User-Agent') || 'null';
 			const userAgent = UA.toLowerCase();
 			userID = env.UUID || env.uuid || env.PASSWORD || env.pswd || userID;
 			if (env.KEY || env.TOKEN || (userID && !isValidUUID(userID))) {
